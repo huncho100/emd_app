@@ -12,6 +12,6 @@ setup(
             'emotion_detection=emotion_detection.emotion_detector:emotion_detector',
         ],
     },
-    author='Your Name',
+    author='huncho de macho',
     description='A package for detecting emotions in text.',
 )
