@@ -8,9 +8,6 @@ def detect_emotion():
     data = request.get_json()
     text_to_analyze = data.get('text', '')
 
-    if not text_to_analyze:
-        return jsonify({"error": "No text provided"}), 400
-
     emotions = emotion_detector(text_to_analyze)
 
     if emotions['dominant_emotion'] is None:
