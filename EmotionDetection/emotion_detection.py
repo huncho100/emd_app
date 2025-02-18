@@ -60,4 +60,4 @@ def emotion_detector(text_to_analyze):
         else:
             return 'No emotions found'
     else:
-        return 'No emotion predictions found'..ete
+        return 'No emotion predictions found'
