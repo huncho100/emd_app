@@ -1,4 +1,4 @@
-#!/home/project/final_project/emd_app/hunchosvenv/bin/python3.11
+#!/home/project/final_project/emd_app/hunchosvenv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

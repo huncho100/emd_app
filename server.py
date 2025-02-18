@@ -13,7 +13,9 @@ def detect_emotion():
 
     emotions = emotion_detector(text_to_analyze)
 
-    # Format the response
+    if emotions['dominant_emotion'] is None:
+        return jsonify({"result": "Invalid text! Please try again!"})
+
     response = {
         "anger": emotions.get('anger', 0),
         "disgust": emotions.get('disgust', 0),
@@ -23,7 +25,6 @@ def detect_emotion():
         "dominant_emotion": emotions.get('dominant_emotion', '')
     }
 
-    # Create the output string as per the required format
     response_string = (f"For the given statement, the system response is 'anger': {response['anger']}, "
                        f"'disgust': {response['disgust']}, 'fear': {response['fear']}, 'joy': {response['joy']} "
                        f"and 'sadness': {response['sadness']}. The dominant emotion is {response['dominant_emotion']}.")
